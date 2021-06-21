@@ -6,7 +6,7 @@
     - name: Install nginx
       apt:
         name: nginx-extras
-        update_cache: yes
+        #update_cache: yes
     - name: Start nginx srvice
       systemd:
         name: nginx

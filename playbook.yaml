@@ -34,10 +34,10 @@
   handlers:
     - name: restart nginx
       systemd:
-        deamon_reload: true
+        daemon_reload: true
         name: nginx
         state: restarted
       register: restart_nginx_result
       ignore_errors: true
-      when: nginx_config_status == 0
+      when: nginx_config_status.rc == 0
 
